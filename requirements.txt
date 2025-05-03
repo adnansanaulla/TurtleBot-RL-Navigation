@@ -1,0 +1,4 @@
+torch 2.7.0
+rospy 1.17.0cat
+numpy 2.2.4
+catkin_tools 0.9.4
