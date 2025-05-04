@@ -1,0 +1,9 @@
+<launch>
+  <arg name="world_file" default="$(find turtlebot_rl)/worlds/maze.world"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_file)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+  </include>
+</launch>

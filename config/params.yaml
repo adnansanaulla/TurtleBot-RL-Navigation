@@ -1,0 +1,12 @@
+agent:
+  gamma: 0.99
+  learning_rate: 0.001
+  batch_size: 64
+  buffer_size: 10000
+  update_freq: 10
+
+env:
+  laser_dim: 36
+  min_obstacle_distance: 0.2
+  linear_speed: 0.2
+  angular_speed: 0.5
