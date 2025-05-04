@@ -1,91 +1,156 @@
 <?xml version="1.0" ?>
 <sdf version="1.6">
-  <world name="default">
+  <world name="complex_maze">
 
-    <!-- Ground -->
     <include>
       <uri>model://ground_plane</uri>
     </include>
-
-    <!-- Sun -->
     <include>
       <uri>model://sun</uri>
     </include>
 
-    <!-- Box 1 -->
-    <model name="box1">
+    <model name="wall_north">
       <static>true</static>
-      <link name="link1">
-        <visual name="visual1">
+      <link name="north_link">
+        <collision name="north_collision">
           <geometry>
-            <box><size>1 1 1</size></box>
-          </geometry>
-          <material><ambient>1 0 0 1</ambient></material>
-        </visual>
-        <collision name="collision1">
-          <geometry>
-            <box><size>1 1 1</size></box>
+            <box><size>10 0.2 1</size></box>
           </geometry>
         </collision>
+        <visual name="north_visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
       </link>
-      <pose>2 0 0.5 0 0 0</pose>
+      <pose>0 5 0.5 0 0 0</pose>
     </model>
 
-    <!-- Box 2 -->
-    <model name="box2">
+    <model name="wall_south">
       <static>true</static>
-      <link name="link2">
-        <visual name="visual2">
+      <link name="south_link">
+        <collision name="south_collision">
           <geometry>
-            <box><size>1 1 1</size></box>
-          </geometry>
-          <material><ambient>0 1 0 1</ambient></material>
-        </visual>
-        <collision name="collision2">
-          <geometry>
-            <box><size>1 1 1</size></box>
+            <box><size>10 0.2 1</size></box>
           </geometry>
         </collision>
+        <visual name="south_visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
       </link>
-      <pose>-2 0 0.5 0 0 0</pose>
+      <pose>0 -5 0.5 0 0 0</pose>
     </model>
 
-    <!-- Box 3 -->
-    <model name="box3">
+    <model name="wall_east">
       <static>true</static>
-      <link name="link3">
-        <visual name="visual3">
+      <link name="east_link">
+        <collision name="east_collision">
           <geometry>
-            <box><size>1 1 1</size></box>
-          </geometry>
-          <material><ambient>0 0 1 1</ambient></material>
-        </visual>
-        <collision name="collision3">
-          <geometry>
-            <box><size>1 1 1</size></box>
+            <box><size>0.2 10 1</size></box>
           </geometry>
         </collision>
+        <visual name="east_visual">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
       </link>
-      <pose>0 2 0.5 0 0 0</pose>
+      <pose>5 0 0.5 0 0 0</pose>
     </model>
 
-    <!-- Box 4 -->
-    <model name="box4">
+    <model name="wall_west">
       <static>true</static>
-      <link name="link4">
-        <visual name="visual4">
+      <link name="west_link">
+        <collision name="west_collision">
           <geometry>
-            <box><size>1 1 1</size></box>
-          </geometry>
-          <material><ambient>1 1 0 1</ambient></material>
-        </visual>
-        <collision name="collision4">
-          <geometry>
-            <box><size>1 1 1</size></box>
+            <box><size>0.2 10 1</size></box>
           </geometry>
         </collision>
+        <visual name="west_visual">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+          <material><ambient>0.5 0.5 0.5 1</ambient></material>
+        </visual>
       </link>
-      <pose>0 -2 0.5 0 0 0</pose>
+      <pose>-5 0 0.5 0 0 0</pose>
+    </model>
+
+    <model name="int_wall1">
+      <static>true</static>
+      <link name="iw1_link">
+        <collision name="iw1_collision">
+          <geometry>
+            <box><size>8 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="iw1_visual">
+          <geometry>
+            <box><size>8 0.2 1</size></box>
+          </geometry>
+          <material><ambient>0.7 0.2 0.2 1</ambient></material>
+        </visual>
+      </link>
+      <pose>0 3 0.5 0 0 0</pose>
+    </model>
+
+    <model name="int_wall2">
+      <static>true</static>
+      <link name="iw2_link">
+        <collision name="iw2_collision">
+          <geometry>
+            <box><size>0.2 6 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="iw2_visual">
+          <geometry>
+            <box><size>0.2 6 1</size></box>
+          </geometry>
+          <material><ambient>0.2 0.7 0.2 1</ambient></material>
+        </visual>
+      </link>
+      <pose>2 -1 0.5 0 0 0</pose>
+    </model>
+
+    <model name="int_wall3">
+      <static>true</static>
+      <link name="iw3_link">
+        <collision name="iw3_collision">
+          <geometry>
+            <box><size>8 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="iw3_visual">
+          <geometry>
+            <box><size>8 0.2 1</size></box>
+          </geometry>
+          <material><ambient>0.2 0.2 0.7 1</ambient></material>
+        </visual>
+      </link>
+      <pose>0 -3 0.5 0 0 0</pose>
+    </model>
+
+    <model name="int_wall4">
+      <static>true</static>
+      <link name="iw4_link">
+        <collision name="iw4_collision">
+          <geometry>
+            <box><size>0.2 6 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="iw4_visual">
+          <geometry>
+            <box><size>0.2 6 1</size></box>
+          </geometry>
+          <material><ambient>0.7 0.7 0.2 1</ambient></material>
+        </visual>
+      </link>
+      <pose>-2 1 0.5 0 0 0</pose>
     </model>
 
   </world>
