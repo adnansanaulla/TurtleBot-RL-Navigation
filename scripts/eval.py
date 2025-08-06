@@ -8,7 +8,7 @@ from env.turtlebot_env import TurtleBotEnv
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
-
+## evaluation
 env = TurtleBotEnv()
 agent = DQNAgent(state_dim = 36, action_dim = 3)
 agent.model.load_state_dict(torch.load("models/checkpoint.pth"))
