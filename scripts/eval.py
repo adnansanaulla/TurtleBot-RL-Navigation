@@ -23,6 +23,6 @@ for episode in range(num_eval_episodes):
         action = agent.act(state, epsilon = 0)
         next_state, reward, done = env.step(action)
         state = next_state
-        total_reward += reward
+        total_reward = total_reward + reward
         step += 1
     print (f"Eval Episode {episode}: Total Reward = {total_reward}, Steps = {step}")
