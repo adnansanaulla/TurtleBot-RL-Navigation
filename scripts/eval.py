@@ -24,5 +24,5 @@ for episode in range(num_eval_episodes):
         next_state, reward, done = env.step(action)
         state = next_state
         total_reward = total_reward + reward
-        step += 1
+        step = step + 1
     print (f"Eval Episode {episode}: Total Reward = {total_reward}, Steps = {step}")
