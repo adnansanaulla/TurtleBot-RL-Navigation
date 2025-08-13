@@ -13,7 +13,7 @@ env = TurtleBotEnv()
 agent = DQNAgent(state_dim = 36, action_dim = 3)
 agent.model.load_state_dict(torch.load("models/checkpoint.pth"))
 print("Starting Eval")
-num_eval_episodes = 10
+num_eval_episodes = 11
 for episode in range(num_eval_episodes):
     state = env.reset()
     done = False
