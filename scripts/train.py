@@ -24,7 +24,7 @@ for episode in range(500):
         agent.store(state, action, reward, next_state, done)
         agent.train()
         state = next_state
-        total_reward += reward
+        total_reward = total_reward + reward
     if episode % 10 == 0:
         agent.update_target()
     print(f"Episode {episode}: Total Reward = {total_reward}")
