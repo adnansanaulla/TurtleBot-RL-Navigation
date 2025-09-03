@@ -4,7 +4,7 @@ import torch.optim as optim
 import random
 import numpy as np
 import yaml
-
+## dqn
 class DQN(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(DQN, self).__init__()
