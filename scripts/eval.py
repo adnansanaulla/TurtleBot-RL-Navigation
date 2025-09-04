@@ -25,4 +25,4 @@ for episode in range(num_eval_episodes):
         state = next_state
         total_reward = total_reward + reward
         step = step + 1
-    print (f"Eval Ep {episode}: Total Reward = {total_reward}, Steps = {step}")
+    print (f"Eval Ep {episode}: Total Reward = {total_reward}, Step(s) = {step}")
